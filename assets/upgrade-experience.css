@@ -105,3 +105,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+@media (max-width: 375px) {
+    .upgrade-experience-section {
+      display: none; 
+    }
+  }
