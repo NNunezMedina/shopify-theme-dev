@@ -69,14 +69,16 @@
   max-width: 98px;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 /* Mostrar el menú hamburguesa en pantallas de hasta 375px de ancho */
 @media (max-width: 375px) {
-  /* Menú hamburguesa visible */
   .hamburger-menu {
     display: block;
   }
 
-  /* Ocultar el menú de navegación por defecto en pantallas pequeñas */
   .main-nav ul {
     display: none; 
     flex-direction: column;
@@ -89,19 +91,16 @@
     padding: 10px;
   }
 
-  /* Estilos para los elementos del menú desplegado */
   .main-nav ul li {
     text-align: center;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
   }
 
-  /* Mostrar el menú de navegación cuando el menú hamburguesa esté activo */
   .main-nav.active ul {
     display: flex;
   }
 
-  /* Ajustar los iconos para pantallas pequeñas */
   .header-icons {
     display: flex;
     justify-content: space-between;
@@ -117,7 +116,6 @@
   }
 }
 
-/* Estilos generales del menú hamburguesa */
 .hamburger-menu img {
   width: 24px;
   height: 24px;
