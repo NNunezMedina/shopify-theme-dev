@@ -101,44 +101,166 @@
   line-height: 30px;
   margin-top: 8px;
   margin-bottom: 8px;
-  padding: 0; 
+  padding: 0;
 }
 
 .logos {
-  display: flex; 
-  justify-content: flex-start; 
-  align-items: center; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 25px;
   height: 42px;
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
 .logos img {
-    height: 28px;
+  height: 28px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-image img:first-child {
+  position: relative;
+  z-index: 2;
+  top: -20px;
+}
+
+.hero-image img:last-child {
+  position: relative;
+  z-index: 1;
+  margin-left: -200px;
+  top: -60px;
+}
+
+@media (max-width: 375px) {
+  .text-content h1 {
+    visibility: hidden;
+    position: relative;
+  }
+
+  .highlight {
+    display: none;
+    position: relative;
+  }
+
+  .text-content h1::before {
+    content: "Ultimate Cold ";
+    visibility: visible;
+  }
+
+  .highlight::before {
+    content: "Therapy Solution";
+    visibility: visible;
+    position: relative;
+}
+
+  .hero-section {
+    max-width: 375px; 
+    height: 922px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 70px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    gap: 16px;
+    /* padding: 20px; */
+  }
+
+  .rating-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stars-text {
+    line-height: 21.6px;
+  }
+
+  .text-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .highlight,
+  .highlight-text {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 357px;
+    font-size: 16px;
+  }
+
+  .as-seen-on {
+    align-items: center;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; 
+    width: 335px; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+  }
+
+  .logos img {
+    max-width: 80px; 
+    height: auto; 
   }
 
   .hero-image {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 80px;
   }
-  
+
   .hero-image img {
     max-width: 100%;
-    height: auto;
+    margin: 0 auto;
   }
 
   .hero-image img:first-child {
     position: relative;
-    z-index: 2; /* Asegura que la primera imagen esté por encima */
-    top: -20px; /* Ajusta este valor para mover la imagen hacia arriba */
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 266px;
+    height: 267px;
   }
 
   .hero-image img:last-child {
     position: relative;
-    z-index: 1; /* Asegura que la segunda imagen esté detrás */
-    margin-left: -200px; 
-    top: -60px;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    width: 190px;
+    height: 191px;
+    padding-bottom: 70px;
   }
+}
