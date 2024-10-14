@@ -1,0 +1,161 @@
+.best-sellers-section {
+    width: 1312px;
+    height: 925px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F8FF 100%);
+    padding: 56px 64px;
+    gap: 80px;
+}
+
+.container-best-sellers {
+    text-align: center;
+    width: 100%; 
+}
+
+.content-best-sellers {
+    text-align: left;
+    width: 50%; /* Ajusta el ancho si es necesario */
+}
+
+.section-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0E83F9;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.best-sellers-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 80px;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    width: 100%;
+    max-width: 1312px;
+}
+
+.product-item {
+    width: 304px;
+    height: 471px;
+    gap: 16px;
+    text-align: left;
+}
+
+.product-item img {
+    width: 270px;
+    height: 304px;
+    object-fit: cover;
+}
+
+.product-badge {
+    display: inline-block;
+    background-color: #FFA500;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 133px;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars-best-sellers {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.stars-best-sellers img {
+    width: 16px;
+    height: 16px;
+}
+
+.stars-best-sellers p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+    color: #000000; 
+}
+
+.product-info h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.product-price {
+    margin-top: 10px;
+}
+
+.prices-best-sellers {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.new-price {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.btn-view-all {
+    margin-top: 80px;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    border:2px solid #0E83F9;
+    color: #0E83F9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-all:hover {
+    background-color: #084D93;
+}
+
+@media (max-width: 375px) {
+    .best-sellers-section {
+      display: none; 
+    }
+  }
