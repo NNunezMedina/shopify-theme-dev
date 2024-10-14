@@ -1,39 +1,51 @@
-<section class="hero-section">
-    <div class="hero-content">
-      <h1>{{ section.settings.heading }}</h1>
-      <p>{{ section.settings.subheading }}</p>
-      <a href="{{ section.settings.button_link }}" class="btn btn-primary">{{ section.settings.button_text }}</a>
+<section class="hero-section" style="
+    max-width: 1440px; 
+    height: 864px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url('{{ 'hero-background.png' | asset_url }}'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0 auto; 
+">
+<div class="hero-content">
+    <span class="rating-text">
+        <span class="stars">
+            <img src="{{ 'star-icon.png' | asset_url }}" alt="Star" class="star-icon">
+            <img src="{{ 'star-icon.png' | asset_url }}" alt="Star" class="star-icon">
+            <img src="{{ 'star-icon.png' | asset_url }}" alt="Star" class="star-icon">
+            <img src="{{ 'star-icon.png' | asset_url }}" alt="Star" class="star-icon">
+            <img src="{{ 'star-icon.png' | asset_url }}" alt="Star" class="star-icon">
+          </span>
+        <span class="stars-text">
+            The Number One Water Chiller For Ice Bath
+        </span>
+      </span>      
+      <span class="text-content">
+          <h1>Transform Your Recovery with the 
+            <span class="highlight">Ultimate Water Chiller</span>
+        </h1>
+          <p>Experience consistent cold therapy without the hassle. Our advanced water chiller keeps your ice bath at the perfect temperature 24/7, with easy remote control from your phone. Say goodbye to ice runs and constant water changes—
+            <span class="highlight-text">recover better, faster, and smarter.</span></p>
+      </span>
+      <a href="{{ section.settings.button_link }}" class="btn btn-primary">SHOP NOW</a>
+    
+    <div class="as-seen-on">
+      <span>As Seen On</span>
+      <div class="logos">
+        <img src="{{ 'digital.png' | asset_url }}" alt="digital journal">
+        <img src="{{ 'fox.png' | asset_url }}" alt="FOX">
+        <img src="{{ 'usatoday.png' | asset_url }}" alt="Usatoday">
+        <img src="{{ 'market.png' | asset_url }}" alt="Markettoday">
+      </div>
     </div>
-  </section>
-  
-  {% schema %}
-  {
-    "name": "Hero",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Welcome to Our Store"
-      },
-      {
-        "type": "text",
-        "id": "subheading",
-        "label": "Subheading",
-        "default": "Find the best products here"
-      },
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "Button Link",
-        "default": "/collections/all"
-      },
-      {
-        "type": "text",
-        "id": "button_text",
-        "label": "Button Text",
-        "default": "Shop Now"
-      }
-    ]
-  }
-  {% endschema %}
+  </div>
+
+  <div class="hero-image">
+    <img src="{{ 'water-chiller1.png' | asset_url }}" alt="Water Chiller">
+    <img src="{{ 'water-chiller2.png' | asset_url }}" alt="Water Chiller">
+  </div>
+</section>
+
