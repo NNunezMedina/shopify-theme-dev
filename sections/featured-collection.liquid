@@ -4,7 +4,12 @@
       {% for product in collection.products %}
         <div class="product">
           <a href="{{ product.url }}">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            <img
+              src="{{ product.featured_image | image_url: 'medium' }}"
+              alt="{{ product.title }}"
+              width="{{ product.featured_image.width }}"
+              height="{{ product.featured_image.height }}"
+            >
             <p>{{ product.title }}</p>
           </a>
         </div>

@@ -1,40 +1,27 @@
-
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page_title }}</title>
-    
-    <!-- Cargar el archivo de estilos principal -->
-    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
-    <!-- Incluir metadatos importantes -->
-    {{ content_for_header }}
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/collections/all">Shop</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Incluir solo el archivo de estilos para el header -->
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
   
-    <!-- Cuerpo de la página -->
-    <main>
-      {{ content_for_layout }}
-    </main>
+  <!-- Incluir metadatos importantes -->
+  {{ content_for_header }}
+</head>
+<body>
+  <!-- Header -->
+  {% section 'header' %}
   
-    <!-- Footer -->
-    <footer>
-      <p>&copy; {{ shop.name }}</p>
-    </footer>
-  
-    <!-- Scripts -->
-    <script src="{{ 'theme.js' | asset_url }}" defer></script>
-  </body>
-  </html>
+  <!-- Cuerpo principal (obligatorio para evitar el error) -->
+  <main>
+    {{ content_for_layout }}
+    <!-- El contenido dinámico de la página se mostrará aquí -->
+  </main>
+
+</body>
+</html>
