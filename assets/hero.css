@@ -1,0 +1,46 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-image: url("{{ 'hero-background.png' | asset_url }}");
+    background-size: cover;
+  }
+  
+  .hero-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    color: #fff;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-text .btn {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .hero-image img {
+    max-width: 500px;
+  }

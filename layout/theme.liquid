@@ -9,6 +9,7 @@
   
   <!-- Incluir solo el archivo de estilos para el header -->
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'hero.css' | asset_url }}">
   
   <!-- Incluir metadatos importantes -->
   {{ content_for_header }}
@@ -19,6 +20,7 @@
   
   <!-- Cuerpo principal (obligatorio para evitar el error) -->
   <main>
+
     {{ content_for_layout }}
     <!-- El contenido dinámico de la página se mostrará aquí -->
   </main>
