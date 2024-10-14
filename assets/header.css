@@ -7,7 +7,6 @@
   align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 .container {
@@ -18,7 +17,6 @@
   align-items: center;
   margin: 0 auto;
   gap: 32px;
-  border: 1px solid blue;
 }
 
 .main-nav ul {
@@ -46,7 +44,6 @@
 .header-icons {
   display: flex;
   width: 253px;
-  border: 1px solid red;
   gap: 20px; 
   justify-content: end;
   align-items: center;
@@ -112,7 +109,6 @@
     height: 98px;
     display: flex;
     align-items: center;
-    border: 1px solid red;
   }
 }
 
