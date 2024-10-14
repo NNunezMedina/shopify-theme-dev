@@ -1,0 +1,107 @@
+.upgrade-experience-section {
+    width: 1440px;
+    height: 569px;
+    padding-top: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: linear-gradient(360deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.container-upgrade-experience {
+    border-radius: 32px;
+    border: 2px solid #0E83F9;
+    width: 826px;
+    height: auto; 
+    padding-top: 0;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 40px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.upgrade-experience-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    margin-bottom: 20px;
+}
+
+.upgrade-experience-section span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    margin-bottom: 20px;
+}
+
+.upgrade-experience-section p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    width: 826px; /* Ancho total del contenedor de los botones */
+    height: 64px; /* Altura total del contenedor de los botones */
+    justify-content: space-between; /* Espacia los botones */
+}
+
+.btn-upgrade {
+    width: 393px; 
+    height: 64px; 
+    gap: 8px;
+    border-radius: 10px; 
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%); 
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-upgrade-alt {
+    width: 393px; 
+    height: 64px; 
+    gap: 8px;
+    border-radius: 10px; 
+    background: transparent; 
+    color: #0E83F9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid #0E83F9; 
+}
+
+.btn-upgrade:hover {
+    background-color: #084D93;
+}
+
+.highlight-text {
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

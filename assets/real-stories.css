@@ -1,13 +1,14 @@
 .real-stories-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 56px;
-  padding-bottom: 56px;
   width: 1440px;
   margin: 0 auto;
   gap: 80px;
-  height: 1016px;
+  height: 800px;
   background: linear-gradient(360deg, #ffffff 0%, #f0f8ff 100%);
+  z-index: 0;
 }
 
 .section-title {
@@ -17,6 +18,13 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.gradient-text-real-stories {
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section-title h2 {
