@@ -92,3 +92,9 @@
 .btn-join:hover {
     background-color: #084D93;
 }
+
+@media (max-width: 375px) {
+    .join-section {
+      display: none; 
+    }
+  }

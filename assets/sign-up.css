@@ -1,0 +1,110 @@
+.sign-up-section {
+    width: 1440px;
+    height: 574px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(360deg, #FFFFFF 0%, #F0F8FF 100%);
+}
+
+.container-sign-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    border-radius: 32px;
+}
+
+.content-sign-up {
+    width: 652px;
+    padding-right: 48px;
+    gap: 16px;
+}
+
+.content-sign-up h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 560px;
+}
+
+.highlight-text-signup {
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.content-sign-up p {
+    width: 560px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sign-up-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    width: 327px;
+    height: 34px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #0E83F9;
+    border-radius: 8px;
+}
+
+.btn-sign-up {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 130px;
+}
+
+.btn-sign-up:hover {
+    background-color: #084D93;
+}
+
+.privacy-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 400;
+    width: 513px;
+}
+
+.image-container {
+    width: 60%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+@media (max-width: 375px) {
+    .sign-up-section {
+      display: none; 
+    }
+  }
