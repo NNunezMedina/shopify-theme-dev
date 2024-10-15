@@ -1,0 +1,79 @@
+.help-section {
+    width: 1440px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F8FF 100%);
+    padding: 56px 0;
+}
+
+.container-help {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 24px;
+}
+
+.help-left {
+    width: 494px;
+}
+
+.section-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0E83F9;
+    text-transform: uppercase;
+    width: 494px;
+}
+
+.help-left h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.help-left p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000000;
+}
+
+.help-right {
+    width: 738px;
+    gap: 16px;
+}
+
+.faq-item {
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 700;
+}

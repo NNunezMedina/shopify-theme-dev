@@ -8,23 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-  
-  <!-- Incluir solo el archivo de estilos para el header -->
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
   <link rel="stylesheet" href="{{ 'hero.css' | asset_url }}">
-  
-  <!-- Incluir metadatos importantes -->
+
   {{ content_for_header }}
 </head>
 <body>
-  <!-- Header -->
+
   {% section 'header' %}
-  
-  <!-- Cuerpo principal (obligatorio para evitar el error) -->
+
   <main>
 
     {{ content_for_layout }}
-    <!-- El contenido dinámico de la página se mostrará aquí -->
+
     {% section 'real-stories' %}
     {% section 'upgrade-experience' %}
     {% section 'collections' %}
@@ -32,6 +28,7 @@
     {% section 'chiller-needs' %}
     {% section 'join' %}
     {% section 'sign-up' %}
+    {% section 'help' %}
   </main>
 
 </body>
