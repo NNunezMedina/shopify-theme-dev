@@ -33,6 +33,7 @@
   font-weight: 700;
   font-size: 56px;
   line-height: 67.2px;
+  margin-bottom: 0;
 }
 
 .text-content p {
@@ -40,6 +41,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+  width: 657px;
 }
 
 .highlight {
@@ -48,6 +50,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  font-size: 56px;
+  margin: 0;
 }
 
 .highlight-text {
@@ -102,6 +106,10 @@
   margin-top: 8px;
   margin-bottom: 8px;
   padding: 0;
+}
+
+.as-seen-on span {
+  margin-top: 20px;
 }
 
 .logos {

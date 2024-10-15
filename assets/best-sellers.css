@@ -46,6 +46,11 @@
     line-height: 27px;
     color: #000000;
     margin-bottom: 80px;
+    width: 702px;
+}
+
+.section-description p {
+    width: 702px;
 }
 
 .products-grid {
