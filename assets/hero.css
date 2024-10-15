@@ -149,20 +149,32 @@
     position: relative;
   }
 
-  .highlight {
-    display: none;
+  .text-content h2 {
+    visibility: hidden;
     position: relative;
   }
 
   .text-content h1::before {
     content: "Ultimate Cold ";
     visibility: visible;
+    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
   }
 
-  .highlight::before {
+  .text-content h2::before {
     content: "Therapy Solution";
+    position: absolute;
     visibility: visible;
-    position: relative;
+    background: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    font-size: 32px;
+    line-height: 40px;
+    left: 10%;
+    top: -90px;
 }
 
   .hero-section {
@@ -170,14 +182,15 @@
     height: 922px;
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 90px;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
 
   .hero-content {
+    margin-top: 20px;
     text-align: center;
     max-width: 100%;
-    height: auto;
+    height: 562px;
     gap: 16px;
     /* padding: 20px; */
   }
@@ -200,6 +213,7 @@
   .text-content p {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 10px;
   }
 
   .highlight,
@@ -208,8 +222,10 @@
   }
 
   .btn {
-    width: 357px;
+    margin-top: 20px;
+    width: 354px;
     font-size: 16px;
+    margin-bottom: 30px;
   }
 
   .as-seen-on {
@@ -236,7 +252,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     gap: 80px;
   }
 
