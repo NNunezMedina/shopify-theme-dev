@@ -1,6 +1,6 @@
 .footer-section {
     width: 1312px;
-    height: 819px;
+    height: auto;
     margin: 0 auto;
     background: linear-gradient(360deg, #FFFFFF 0%, #F0F8FF 100%);
     padding: 40px 64px;
@@ -112,7 +112,6 @@
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #666;
-    margin-bottom: 80px;
 }
 
 .footer-legal img{
@@ -128,7 +127,6 @@
     border: none;
     height: 1px;
     background-color: #0E83F9;
-    margin-bottom: 10px;
 }
 
 @media (max-width: 375px) {
