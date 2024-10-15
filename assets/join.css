@@ -93,6 +93,18 @@
     background-color: #084D93;
 }
 
+@media (max-width: 768px) {
+    .join-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 575px) {
+    .join-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .join-section {
       display: none; 

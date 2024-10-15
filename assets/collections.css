@@ -91,6 +91,19 @@
     width: 131px;
 }
 
+
+@media (max-width: 768px) {
+    .collections-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 575px) {
+    .collections-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .collections-section {
       display: none; 

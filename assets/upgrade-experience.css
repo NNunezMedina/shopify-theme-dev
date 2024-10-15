@@ -106,6 +106,18 @@
     background-clip: text;
 }
 
+@media (max-width: 768px) {
+    .upgrade-experience-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 575px) {
+    .upgrade-experience-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .upgrade-experience-section {
       display: none; 

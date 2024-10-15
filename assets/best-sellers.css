@@ -159,6 +159,18 @@
     background-color: #084D93;
 }
 
+@media (max-width: 768px) {
+    .best-sellers-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 575px) {
+    .best-sellers-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .best-sellers-section {
       display: none; 

@@ -103,6 +103,17 @@
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .sign-up-section {
+        display: none; 
+      }
+  }
+  @media (max-width: 575px) {
+    .sign-up-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .sign-up-section {
       display: none; 

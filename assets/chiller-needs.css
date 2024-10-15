@@ -172,6 +172,18 @@
   background-color: #084d93;
 }
 
+@media (max-width: 768px) {
+  .chiller-needs-section {
+    display: none; 
+  }
+}
+
+@media (max-width: 575px) {
+  .chiller-needs-section {
+    display: none; 
+  }
+}
+
 @media (max-width: 375px) {
     .chiller-needs-section {
       display: none; 

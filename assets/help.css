@@ -78,6 +78,17 @@
     font-weight: 700;
 }
 
+@media (max-width: 768px) {
+    .help-section {
+        display: none; 
+      }
+  }
+  @media (max-width: 575px) {
+    .help-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .help-section {
       display: none; 

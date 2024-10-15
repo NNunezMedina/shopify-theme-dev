@@ -140,6 +140,18 @@
     background-color: #0E83F9;
 }
 
+@media (max-width: 768px) {
+    .footer-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 575px) {
+    .footer-section {
+        display: none; 
+      }
+  }
+
 @media (max-width: 375px) {
     .footer-section {
       display: none; 
