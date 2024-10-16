@@ -7,6 +7,7 @@
      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     margin: 0 auto; 
     position: relative;
+    /* flex-wrap: wrap; */
 }
 
 .hero-section::before {
@@ -19,21 +20,23 @@
   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   z-index: 1; /* Colocar el pseudo-elemento detrás del contenido */
   pointer-events: none; /* Para evitar que interfiera con la interacción del usuario */
+  box-sizing: border-box;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: left;
-  max-width: 721px;
+  max-width: 50%;
   height: 594px;
   gap: 32px;
+  padding-left: 20px;
 }
 
 .rating-text {
   display: inline-flex;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .stars {
@@ -48,7 +51,7 @@
 
 .stars-text {
   display: block;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   font-weight: 700;
 }
@@ -56,17 +59,17 @@
 .text-content h1 {
   color: black;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 67.2px;
+  font-size: 3.5rem;
+  line-height: 1.2;
   margin-bottom: 0;
 }
 
 .text-content p {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  width: 657px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  max-width: 90%;
 }
 
 .highlight {
@@ -75,7 +78,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  font-size: 56px;
+  font-size: 3.5rem;
   margin: 0;
 }
 
@@ -87,7 +90,7 @@
   color: transparent;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 27px;
 }
 
@@ -95,9 +98,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 203px;
-  height: 64px;
-  font-size: 18px;
+  width: 250px;
+  min-height: 70px;
+  font-size: 1.125rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -108,17 +111,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   gap: 8px;
-}
-
-.btn:hover {
-  background-color: #084d93;
-}
-
-.btn-primary {
   background-image: linear-gradient(to right, #0e83f9, #084d93);
 }
 
-.btn-primary:hover {
+.btn:hover {
   background-image: linear-gradient(to right, #084d93, #0e83f9);
 }
 
@@ -126,7 +122,7 @@
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -142,14 +138,17 @@
   justify-content: flex-start;
   align-items: center;
   gap: 25px;
-  height: 42px;
+  height: auto;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .logos img {
-  max-width: 100%;  /* Permite que las imágenes se ajusten al ancho del contenedor */
+  max-width: 100%; 
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .hero-image {
@@ -157,10 +156,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 50%;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -173,516 +173,274 @@
 .hero-image img:last-child {
   position: relative;
   z-index: 1;
-  margin-left: -200px;
+  margin-left: -30%;
   top: -60px;
 }
 
-@media (max-width: 1339px) {
+@media (max-width: 1339px) and (min-width: 1024px) {
+  
   .hero-section {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  }
-
-  .hero-section::before {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Cambiar el gradiente del pseudo-elemento */
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    text-align: center;
     max-width: 100%;
-    margin-top: 50px;
-  }
+    padding: 0 20px;
+    flex-direction: column-reverse;
+    padding-top: 200px;
 
-  .hero-image {
-    margin-top: 60px;
-    width: 70%;
-    position: relative;
-    z-index: 2; 
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
   }
-
-  .text-content {
+  .hero-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido */
-    text-align: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
-
-  /* Ocultar los h1 y h2 y reemplazar con texto en el pseudo-elemento */
-  .text-content h1 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h2 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h1::before {
-    content: "Ultimate Cold ";
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height:32px;
-  }
-
-  .text-content h2::before {
-    content: "Therapy Solution";
-    visibility: visible;
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  .text-content p {
-    width: 80%;
-    margin-top: 2px;
-    top:0;
-  }
-
   .rating-text {
+    margin-top: 30px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px; /* Añadir espacio entre rating-text y hero-image */
-    position: relative;
-    z-index: 3;
-  }
-
-  .stars-text {
-    width: 100%;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
     text-align: center;
   }
-
-  .logos {
+  .text-content {
+    margin-top: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 50%;
-    margin-top: 10px;
-    margin-left: 170px;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    flex-direction: column;
   }
-
-  .logos img {
-    width: 30%;
+  .text-content h1{
+    margin-top: 0;
+    font-size: 3rem;
   }
-
+  .text-content p {
+    max-width: 500px;
+    text-align: center;
+    font-size: 1rem;
+  }
   .btn {
-    width: 100%;
-    height: 32px;
-    max-width: 300px;
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+  .logos img {
+    width: 20%; /* Ajustar el tamaño de las imágenes en pantallas grandes */
+  }
+  .as-seen-on {
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
 }
 
-/* Tablet view (max-width: 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1023px) and (min-width: 768px) {
   .hero-section {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  }
-
-  .hero-section::before {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Cambiar el gradiente del pseudo-elemento */
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    text-align: center;
     max-width: 100%;
-    margin-top: 50px;
-  }
+    padding: 0 20px;
+    flex-direction: column-reverse;
+    padding-top: 200px;
 
-  .hero-image {
-    margin-top: 60px;
-    width: 70%;
-    position: relative;
-    z-index: 2; 
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
   }
-
-  .text-content {
+  .hero-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido */
-    text-align: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
-
-  /* Ocultar los h1 y h2 y reemplazar con texto en el pseudo-elemento */
-  .text-content h1 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h2 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h1::before {
-    content: "Ultimate Cold ";
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height:32px;
-  }
-
-  .text-content h2::before {
-    content: "Therapy Solution";
-    visibility: visible;
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  .text-content p {
-    width: 80%;
-    margin-top: 2px;
-    top:0;
-  }
-
   .rating-text {
+    margin-top: 20px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px; /* Añadir espacio entre rating-text y hero-image */
-    position: relative;
-    z-index: 3;
-  }
-
-  .stars-text {
-    width: 100%;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
     text-align: center;
   }
-
-  .logos {
+  .text-content {
+    margin-top: 0;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    flex-direction: column;
+  }
+  .text-content h1{
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  .text-content p {
+    max-width: 500px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .hero-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 50%;
-    margin-top: 10px;
-    margin-left: 170px;
+    justify-content: center; /* Centrar las imágenes del chiller */
   }
-
-  .logos img {
-    width: 30%;
+  .hero-image img:last-child {
+    margin-left: -100px;
   }
-
   .btn {
-    width: 100%;
-    height: 32px;
-    max-width: 300px;
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+  .logos img {
+    width: 20%; /* Ajustar el tamaño de las imágenes en pantallas grandes */
+  }
+  .as-seen-on {
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
 }
 
-
-/* Media Query para pantallas pequeñas (móviles) */
-@media (max-width: 575px) {
+@media (max-width: 767px) and (min-width: 480px) {
   .hero-section {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  }
-
-  .hero-section::before {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Cambiar el gradiente del pseudo-elemento */
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    text-align: center;
     max-width: 100%;
-    margin-top: 250px;
-  }
+    padding: 0 20px;
+    flex-direction: column-reverse;
+    padding-top: 100px;
 
-  .hero-image {
-    margin-top: 60px;
-    width: 70%;
-    position: relative;
-    z-index: 2; 
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
   }
-
-  .text-content {
+  .hero-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido */
-    text-align: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
-
-  /* Ocultar los h1 y h2 y reemplazar con texto en el pseudo-elemento */
-  .text-content h1 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h2 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h1::before {
-    content: "Ultimate Cold ";
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height:32px;
-  }
-
-  .text-content h2::before {
-    content: "Therapy Solution";
-    visibility: visible;
-    position: absolute;
-    top: -200px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  .text-content p {
-    width: 80%;
-    top:-100px;
-  }
-
   .rating-text {
+    margin-top: 20px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px; /* Añadir espacio entre rating-text y hero-image */
-    position: relative;
-    z-index: 3;
-  }
-
-  .stars-text {
-    width: 100%;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
     text-align: center;
   }
-
-  .logos {
+  .text-content {
+    margin-top: 0;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    flex-direction: column;
+  }
+  .text-content h1{
+    margin-top: 0;
+    font-size: 2.8rem;
+  }
+  .text-content h2 {
+    font-size: 2.8rem;
+  }
+  .text-content p {
+    max-width: 500px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  .hero-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 50%;
-    margin-top: 10px;
-    margin-left: 170px;
+    justify-content: center; /* Centrar las imágenes del chiller */
   }
-
-  .logos img {
-    width: 30%;
+  .hero-image img:last-child {
+    margin-left: -100px;
   }
-
   .btn {
-    width: 100%;
-    height: 32px;
-    max-width: 300px;
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+  .logos img {
+    width: 20%; /* Ajustar el tamaño de las imágenes en pantallas grandes */
+  }
+  .as-seen-on {
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
 }
 
-
-@media (max-width: 375px) {
+@media (max-width: 479px) {
   .hero-section {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  }
-
-  .hero-section::before {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Cambiar el gradiente del pseudo-elemento */
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    text-align: center;
     max-width: 100%;
-    margin-top: 300px;
-  }
+    padding: 0 20px;
+    flex-direction: column-reverse;
+    padding-top: 100px;
 
-  .hero-image {
-    margin-top: 60px;
-    width: 70%;
-    position: relative;
-    z-index: 2; 
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
   }
-
-  .text-content {
+  .hero-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido */
-    text-align: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
-
-  /* Ocultar los h1 y h2 y reemplazar con texto en el pseudo-elemento */
-  .text-content h1 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h2 {
-    visibility: hidden;
-    position: relative;
-  }
-
-  .text-content h1::before {
-    content: "Ultimate Cold ";
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #0E83F9 0%, #084D93 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height:32px;
-  }
-
-  .text-content h2::before {
-    content: "Therapy Solution";
-    visibility: visible;
-    position: absolute;
-    top: -300px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  .text-content p {
-    width: 80%;
-    top:-200px;
-  }
-
   .rating-text {
+    margin-top: 20px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px; /* Añadir espacio entre rating-text y hero-image */
-    position: relative;
-    z-index: 3;
-  }
-
-  .stars-text {
-    width: 100%;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
     text-align: center;
   }
-
-  .logos {
+  .text-content {
+    margin-top: 0;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    flex-direction: column;
+  }
+  .text-content h1{
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .text-content h2 {
+    font-size: 2rem;
+  }
+  .text-content p {
+    max-width: 500px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .highlight-text {
+    font-size: 1rem;
+  }
+  .hero-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 50%;
-    margin-top: 10px;
-    margin-left: 170px;
+    justify-content: center; /* Centrar las imágenes del chiller */
   }
-
+  .hero-image img:last-child {
+    margin-left: -100px;
+  }
   .logos img {
-    width: 30%;
+    width: 20%; /* Ajustar el tamaño de las imágenes en pantallas grandes */
   }
-
   .btn {
-    width: 100%;
-    height: 32px;
-    max-width: 300px;
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+  .as-seen-on {
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos dentro de hero-content */
+    align-items: center;
   }
 }

@@ -91,21 +91,26 @@
     width: 131px;
 }
 
-
-@media (max-width: 768px) {
+  @media (max-width: 1339px) and (min-width: 1024px) {
     .collections-section {
         display: none; 
       }
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 1023px) and (min-width: 768px) {
     .collections-section {
         display: none; 
       }
   }
 
-@media (max-width: 375px) {
+  @media (max-width: 767px) and (min-width: 480px) {
     .collections-section {
-      display: none; 
-    }
+        display: none; 
+      }
+  }
+
+  @media (max-width: 479px){
+    .collections-section {
+        display: none; 
+      }
   }

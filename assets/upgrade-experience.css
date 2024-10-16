@@ -106,20 +106,26 @@
     background-clip: text;
 }
 
-@media (max-width: 768px) {
+  @media (max-width: 1339px) and (min-width: 1024px) {
     .upgrade-experience-section {
         display: none; 
       }
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 1023px) and (min-width: 768px) {
     .upgrade-experience-section {
         display: none; 
       }
   }
 
-@media (max-width: 375px) {
+  @media (max-width: 767px) and (min-width: 480px) {
     .upgrade-experience-section {
-      display: none; 
-    }
+        display: none; 
+      }
+  }
+
+  @media (max-width: 479px){
+    .upgrade-experience-section {
+        display: none; 
+      }
   }

@@ -140,20 +140,26 @@
     background-color: #0E83F9;
 }
 
-@media (max-width: 768px) {
+  @media (max-width: 1339px) and (min-width: 1024px) {
     .footer-section {
         display: none; 
       }
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 1023px) and (min-width: 768px) {
     .footer-section {
         display: none; 
       }
   }
 
-@media (max-width: 375px) {
+  @media (max-width: 767px) and (min-width: 480px) {
     .footer-section {
-      display: none; 
-    }
+        display: none; 
+      }
+  }
+
+  @media (max-width: 479px){
+    .footer-section {
+        display: none; 
+      }
   }

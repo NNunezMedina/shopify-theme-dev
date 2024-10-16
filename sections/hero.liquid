@@ -24,7 +24,7 @@
           <p>Experience consistent cold therapy without the hassle. Our advanced water chiller keeps your ice bath at the perfect temperature 24/7, with easy remote control from your phone. Say goodbye to ice runs and constant water changes—
             <span class="highlight-text">recover better, faster, and smarter.</span></p>
       </span>
-      <a href="{{ section.settings.button_link }}" class="btn btn-primary">SHOP NOW</a>
+      <a href="{{ section.settings.button_link }}" class="btn">SHOP NOW</a>
     
     <div class="as-seen-on">
       <span>As Seen On</span>
@@ -42,6 +42,28 @@
     <img src="{{ 'water-chiller2.png' | asset_url }}" alt="Water Chiller">
   </div>
 </section>
+
+<script>
+  // Función para cambiar el texto del h1 y h2 dependiendo del tamaño de la pantalla
+  function updateHeadingText() {
+    const h1Heading = document.querySelector('.text-content h1'); // Selecciona el h1
+    const h2Heading = document.querySelector('.text-content h2'); // Selecciona el h2
+
+    if (window.innerWidth <= 1339) {
+      h1Heading.textContent = 'Ultimate Cold'; // Texto para el h1 en pantallas pequeñas
+      h2Heading.textContent = 'Therapy Solution'; // Texto para el h2 en pantallas pequeñas
+    } else {
+      h1Heading.textContent = 'Transform Your Recovery with the'; // Texto para el h1 en pantallas grandes
+      h2Heading.textContent = 'Ultimate Water Chiller'; // Texto para el h2 en pantallas grandes
+    }
+  }
+
+  // Llama a la función inicialmente para establecer el texto correcto al cargar la página
+  updateHeadingText();
+
+  // Escucha el evento de cambio de tamaño de ventana y ejecuta la función
+  window.addEventListener('resize', updateHeadingText);
+</script>
 
 
 

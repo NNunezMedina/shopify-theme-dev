@@ -70,6 +70,48 @@
   display: none;
 }
 
+@media (max-width: 1339px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 335px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .main-nav ul li {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .main-nav.active ul {
+    display: flex;
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+
+  .main-header .header-logo {
+    width: 151.5px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;

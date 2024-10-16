@@ -172,19 +172,25 @@
   background-color: #084d93;
 }
 
-@media (max-width: 768px) {
-  .chiller-needs-section {
-    display: none; 
+  @media (max-width: 1339px) and (min-width: 1024px) {
+    .chiller-needs-section {
+      display: none; 
+    }
   }
-}
 
-@media (max-width: 575px) {
-  .chiller-needs-section {
-    display: none; 
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .chiller-needs-section {
+      display: none; 
+    }
   }
-}
 
-@media (max-width: 375px) {
+  @media (max-width: 767px) and (min-width: 480px) {
+    .chiller-needs-section {
+      display: none; 
+    }
+  }
+
+  @media (max-width: 479px){
     .chiller-needs-section {
       display: none; 
     }

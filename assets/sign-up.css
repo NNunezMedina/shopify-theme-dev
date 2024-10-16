@@ -103,19 +103,26 @@
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .sign-up-section {
-        display: none; 
-      }
-  }
-  @media (max-width: 575px) {
+  @media (max-width: 1339px) and (min-width: 1024px) {
     .sign-up-section {
         display: none; 
       }
   }
 
-@media (max-width: 375px) {
+  @media (max-width: 1023px) and (min-width: 768px) {
     .sign-up-section {
-      display: none; 
-    }
+        display: none; 
+      }
+  }
+
+  @media (max-width: 767px) and (min-width: 480px) {
+    .sign-up-section {
+        display: none; 
+      }
+  }
+
+  @media (max-width: 479px){
+    .sign-up-section {
+        display: none; 
+      }
   }
